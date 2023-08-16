@@ -10,5 +10,21 @@ int InputNum(string message)
     // return = int num;
     return int.Parse(Console.ReadLine()!);
 }
-int firstNum = InterNum("Введите первое число: ");
-int secondNum = InterNum("Введите второе число: ");
+
+bool Multiplicity(int num1, int num2)
+{
+    /* if(num1 % num2 == 0)
+        return true;
+    return false; */
+
+    return num1 % num2 == 0;
+}
+
+int firstNum = InputNum("Введите первое число: ");
+int secondNum = InputNum("Введите второе число: ");
+
+bool result = Multiplicity(firstNum, secondNum);
+if(result == true)
+    Console.WriteLine("Второе число кратно первому");
+else
+Console.WriteLine($"Второе число не кратно первому, остаток от деления: {firstNum % secondNum}");
