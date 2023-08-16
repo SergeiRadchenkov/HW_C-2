@@ -12,11 +12,15 @@ bool Multiplicity(int number)
 int num = InputNum("Введите число: ");
 bool result = Multiplicity(num);
 
-if(result)
+string strResult = result ? "Да" : "Нет";
+
+System.Console.WriteLine(strResult);
+
+/* if(result)
 {
     System.Console.WriteLine("Да");
 }
 else
 {
     System.Console.WriteLine("Нет");
-}
+} */
